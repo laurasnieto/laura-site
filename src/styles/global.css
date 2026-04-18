@@ -1,0 +1,117 @@
+/* =====================
+   VARIABLES & RESET
+   ===================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #f7f2ec;
+  --terracota: #1e1c8f;
+  --terracota-light: #e8d5c4;
+  --terracota-dark: #5c3d2e;
+  --text: #2a1f1a;
+  --muted: #8a6f5e;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --ma: 1200px;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--text); font-family: var(--sans); font-weight: 300; }
+
+/* =====================
+   NAVEGACIÓN
+   ===================== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 3rem;
+  background: var(--cream);
+  border-bottom: 1px solid var(--terracota-light);
+}
+
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--terracota-dark);
+  text-decoration: none;
+}
+
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+
+.nav-links a {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: var(--terracota); }
+
+/* =====================
+   FOOTER
+   ===================== */
+footer {
+  padding: 1.5rem 3rem;
+  background: var(--terracota-dark);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* =====================
+   BOTONES
+   ===================== */
+.btn-primary {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background: var(--terracota);
+  color: var(--cream);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover { opacity: 0.85; }
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  border: 1px solid var(--terracota-light);
+  color: var(--terracota-light);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover { background: var(--terracota-light); color: var(--terracota-dark); }
+
+/* =====================
+   ANIMACIONES
+   ===================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================
+   RESPONSIVE BASE
+   ===================== */
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+}
