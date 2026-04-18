@@ -1,0 +1,198 @@
+---
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Contacto — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --cream: #f7f2ec;
+        --terracota: #b85c38;
+        --terracota-light: #e8d5c4;
+        --terracota-dark: #5c3d2e;
+        --text: #2a1f1a;
+        --muted: #8a6f5e;
+        --serif: 'Cormorant Garamond', Georgia, serif;
+        --sans: 'DM Sans', system-ui, sans-serif;
+      }
+
+      html { scroll-behavior: smooth; }
+      body { background: var(--cream); color: var(--text); font-family: var(--sans); font-weight: 300; }
+
+      nav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 3rem;
+        background: var(--cream);
+        border-bottom: 1px solid var(--terracota-light);
+      }
+
+      .nav-logo {
+        font-family: var(--serif);
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: var(--terracota-dark);
+        text-decoration: none;
+      }
+
+      .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+
+      .nav-links a {
+        font-family: var(--sans);
+        font-size: 0.8rem;
+        font-weight: 400;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover, .nav-links a.active { color: var(--terracota); }
+
+      .page {
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 3rem 5rem;
+      }
+
+      .page-label {
+        font-family: var(--sans);
+        font-size: 0.75rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        animation: fadeUp 0.7s ease forwards 0.1s;
+      }
+
+      .page-title {
+        font-family: var(--serif);
+        font-size: clamp(3.5rem, 9vw, 8rem);
+        font-weight: 300;
+        line-height: 0.95;
+        color: var(--terracota-dark);
+        margin-bottom: 3rem;
+        opacity: 0;
+        animation: fadeUp 0.8s ease forwards 0.2s;
+      }
+
+      .page-title em {
+        font-style: italic;
+        color: var(--terracota);
+      }
+
+      .contact-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        opacity: 0;
+        animation: fadeUp 0.8s ease forwards 0.4s;
+      }
+
+      .contact-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 0;
+        border-top: 1px solid var(--terracota-light);
+        text-decoration: none;
+        color: var(--terracota-dark);
+        transition: padding-left 0.3s ease;
+      }
+
+      .contact-link:last-child {
+        border-bottom: 1px solid var(--terracota-light);
+      }
+
+      .contact-link:hover { padding-left: 1rem; }
+
+      .contact-link:hover .link-name { color: var(--terracota); }
+
+      .link-name {
+        font-family: var(--serif);
+        font-size: 2rem;
+        font-weight: 300;
+        transition: color 0.2s;
+      }
+
+      .link-detail {
+        font-family: var(--sans);
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      .arrow { font-size: 1.5rem; color: var(--muted); }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      @media (max-width: 640px) {
+        nav { padding: 1rem 1.5rem; }
+        .page { padding: 0 1.5rem 4rem; }
+        .link-name { font-size: 1.5rem; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav>
+      <a href="/" class="nav-logo">Nombre Apellido</a>
+      <ul class="nav-links">
+        <li><a href="/">Trabajo</a></li>
+        <li><a href="/sobre-mi">Sobre mí</a></li>
+        <li><a href="/contacto" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main class="page">
+      <p class="page-label">Hablemos</p>
+      <h1 class="page-title">
+        Cuéntame<br />
+        tu <em>proyecto.</em>
+      </h1>
+
+      <div class="contact-links">
+        <a href="mailto:contacto@email.com" class="contact-link">
+          <span class="link-name">Email</span>
+          <span class="link-detail">contacto@email.com</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="link-name">Instagram</span>
+          <span class="link-detail">@usuario</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="link-name">LinkedIn</span>
+          <span class="link-detail">linkedin.com/in/usuario</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="link-name">Behance</span>
+          <span class="link-detail">behance.net/usuario</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </main>
+
+  </body>
+</html>
