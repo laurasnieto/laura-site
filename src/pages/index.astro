@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
 const categories = [
   {
     title: "Diseño Gráfico",
@@ -434,5 +435,6 @@ const categories = [
       cards.forEach(card => observer.observe(card));
     </script>
 
+    <Analytics />
   </body>
 </html>
