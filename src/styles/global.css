@@ -1,4 +1,40 @@
 /* =====================
+   FUENTES
+   ===================== */
+@font-face {
+  font-family: 'Px Grotesk';
+  src: url('/fonts/Px-Grotesk-Light.woff2') format('woff2'),
+       url('/fonts/Px-Grotesk-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Px Grotesk';
+  src: url('/fonts/Px-Grotesk-Regular.woff2') format('woff2'),
+       url('/fonts/Px-Grotesk-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Px Grotesk';
+  src: url('/fonts/Px-Grotesk-Regular-Italic.woff2') format('woff2'),
+       url('/fonts/Px-Grotesk-Regular-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Px Grotesk';
+  src: url('/fonts/Px-Grotesk-Bold.woff2') format('woff2'),
+       url('/fonts/Px-Grotesk-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =====================
    VARIABLES & RESET
    ===================== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -10,9 +46,9 @@
   --terracota-dark: #5c3d2e;
   --text: #2a1f1a;
   --muted: #8a6f5e;
-  --serif: 'Cormorant Garamond', Georgia, serif;
+  --serif: 'Px Grotesk', system-ui, sans-serif;
   --sans: 'DM Sans', system-ui, sans-serif;
-  --ma: 1200px;
+  --max: 1200px;
 }
 
 html { scroll-behavior: smooth; }
